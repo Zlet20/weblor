@@ -12,7 +12,7 @@ import com.example.weblor.item.model.Status;
 @Repository
 public interface ItemRepository extends JpaRepository<Item, Long> {
 
-	Optional<Item> findByItemName(String itemName);
+	Optional<Item> findByName(String name);
 
 
 	List<Item> findItemByStatus(Status status);

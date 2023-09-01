@@ -1,9 +1,8 @@
 package com.example.weblor.feature.model;
 
-import java.time.LocalDate;
 import java.util.UUID;
 
-import com.example.weblor.item.model.Item;
+import com.example.weblor.common.BaseEntity;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.OneToOne;
@@ -21,8 +20,7 @@ import lombok.experimental.SuperBuilder;
 @Setter
 @Entity
 @Table(name = "student_info")
-public class StudentInfo {
-	private UUID id;
+public class StudentInfo extends BaseEntity {
 	private String classNumberName;
 	@NotBlank(message = "name.not-blank")
 	private String name;

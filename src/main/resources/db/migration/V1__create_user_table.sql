@@ -1,4 +1,4 @@
-CREATE TABLE w_user (
+ CREATE TABLE w_user (
 	ID 	VARCHAR ( 36 ) NOT NULL,
 	created_at 			TIMESTAMP,
 	created_by 			VARCHAR ( 36 ),
@@ -39,7 +39,6 @@ CREATE TABLE student_info (
 CREATE TABLE usage_info (
 	ID 	VARCHAR ( 36 ) PRIMARY KEY NOT NULL,
 	'time'	DATE,
-	 ( ID )
 	item_id VARCHAR ( 36 ),
     student_info_id VARCHAR ( 36 ),
 	FOREIGN KEY (item_id) REFERENCES w_item(ID),

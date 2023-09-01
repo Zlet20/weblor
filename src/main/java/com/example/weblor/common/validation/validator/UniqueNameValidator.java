@@ -23,7 +23,7 @@ public class UniqueNameValidator implements ConstraintValidator<UniqueName, Stri
 	
 	@Override
 	public boolean isValid(String itemName, ConstraintValidatorContext context) {
-		Optional<Item> itemOpt = repository.findByItemName(itemName);
+		Optional<Item> itemOpt = repository.findByName(itemName);
 		
 		if(itemOpt.isEmpty()) {
 			return true;

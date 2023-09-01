@@ -1,5 +1,7 @@
 package com.example.weblor.item.dto;
 
+import java.util.UUID;
+
 import com.example.weblor.item.model.Status;
 
 import lombok.AllArgsConstructor;
@@ -11,7 +13,7 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 public class ItemResponseDTO {
-	private Long id;
+	private UUID id;
 	private String name;
 	private Status status;
 }

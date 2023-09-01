@@ -6,6 +6,8 @@ import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.PropertySource;
+import org.springframework.context.annotation.PropertySources;
 import org.springframework.stereotype.Service;
 
 import com.example.weblor.common.exception.BusinessException;
@@ -17,6 +19,7 @@ import com.example.weblor.item.model.Status;
 import com.example.weblor.item.repository.ItemRepository;
 
 @Service
+@PropertySources({ @PropertySource("classpath:/validation/message.properties") })
 public class ItemServiceImpl implements ItemService{
 
 	@Autowired

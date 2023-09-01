@@ -7,6 +7,7 @@ import com.example.weblor.item.model.Item;
 
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToOne;
@@ -23,6 +24,7 @@ import lombok.experimental.SuperBuilder;
 @Entity
 @Table(name = "usage_info")
 public class UsageInfo {
+@Id	
 private UUID id;
 @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST })
 @JoinColumn(name = "item_id",referencedColumnName = "id")
