@@ -1,15 +1,30 @@
 spring:
-  datasource:
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    password: a7ee174a
-    url: jdbc:mysql://us-cdbr-east-06.cleardb.net:3306/heroku_b9de4e3d35c34b8
-    username: bda411683172e7
-  flyway:
-    enabled: false
-    locations: classpath:db/migration
-  jpa:
-    hibernate:
-      ddl-auto: validate
-    properties:
+    security:
+      user:
+        name: admin
+        password: 1234
+    
+    datasource:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      password: a7ee174a
+      url: jdbc:mysql://us-cdbr-east-06.cleardb.net:3306/heroku_b9de4e3d35c34b8
+      username: bda411683172e7
+    
+    flyway:
+      enabled: false
+      locations: classpath:db/migration
+    
+    jpa:
       hibernate:
-        dialect: org.hibernate.dialect.MySQLDialect
+        ddl-auto: validate
+      properties:
+          hibernate:
+            dialect: org.hibernate.dialect.MySQLDialect
+    profiles:
+      active: dev   
+    thymeleaf:
+      cache: false
+      enabled: true
+      prefix: classpath:resources/templates/
+      suffix: .html
+      encoding: UTF-8
