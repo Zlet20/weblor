@@ -20,7 +20,7 @@ import lombok.experimental.SuperBuilder;
 @Setter
 @Entity
 @Table(name = "w_user")
-public class User extends BaseEntity{
+public class WUser extends BaseEntity{
 	private String username;
 
 	private String password;

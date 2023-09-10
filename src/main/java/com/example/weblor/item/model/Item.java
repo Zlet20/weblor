@@ -2,7 +2,7 @@ package com.example.weblor.item.model;
 
 
 import com.example.weblor.common.BaseEntity;
-import com.example.weblor.user.model.User;
+import com.example.weblor.user.model.WUser;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;

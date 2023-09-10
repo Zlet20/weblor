@@ -21,7 +21,7 @@ import com.example.weblor.item.service.ItemService;
 import jakarta.validation.Valid;
 
 @RestController
-@RequestMapping("/items")
+@RequestMapping("/api/v1/items")
 public class ItemController {
 	@Autowired
 	private ItemService service;

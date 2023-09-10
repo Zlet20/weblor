@@ -20,7 +20,7 @@ import com.example.weblor.feature.service.PdfFileService;
 import jakarta.validation.Valid;
 
 @RestController
-@RequestMapping("/features")
+@RequestMapping("/api/v1/features")
 public class FeatureController {
 	@Autowired
 	private FeatureService service;
